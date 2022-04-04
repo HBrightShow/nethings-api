@@ -5,11 +5,11 @@ import (
 	"github.com/jackc/pgx/v4"
 	"github.com/shopspring/decimal"
 
-	"github.com/barnbridge/internal-api/query"
-	"github.com/barnbridge/internal-api/response"
-	"github.com/barnbridge/internal-api/smartexposure/types"
-	globalTypes "github.com/barnbridge/internal-api/types"
-	"github.com/barnbridge/internal-api/utils"
+	"github.com/nethings/internal-api/query"
+	"github.com/nethings/internal-api/response"
+	"github.com/nethings/internal-api/smartexposure/types"
+	globalTypes "github.com/nethings/internal-api/types"
+	"github.com/nethings/internal-api/utils"
 )
 
 func (s *SmartExposure) allTranches(ctx *gin.Context) {

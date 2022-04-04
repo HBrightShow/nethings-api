@@ -6,9 +6,9 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgx/v4"
 
-	"github.com/barnbridge/internal-api/governance/types"
-	"github.com/barnbridge/internal-api/query"
-	"github.com/barnbridge/internal-api/response"
+	"github.com/nethings/internal-api/governance/types"
+	"github.com/nethings/internal-api/query"
+	"github.com/nethings/internal-api/response"
 )
 
 func (g *Governance) HandleProposals(ctx *gin.Context) {

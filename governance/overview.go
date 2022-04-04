@@ -4,10 +4,10 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgx/v4"
 
-	"github.com/barnbridge/internal-api/config"
-	"github.com/barnbridge/internal-api/governance/types"
-	"github.com/barnbridge/internal-api/response"
-	"github.com/barnbridge/internal-api/utils"
+	"github.com/nethings/internal-api/config"
+	"github.com/nethings/internal-api/governance/types"
+	"github.com/nethings/internal-api/response"
+	"github.com/nethings/internal-api/utils"
 )
 
 func (g *Governance) HandleOverview(ctx *gin.Context) {

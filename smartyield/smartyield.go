@@ -3,7 +3,7 @@ package smartyield
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/barnbridge/internal-api/db"
+	"github.com/nethings/internal-api/db"
 )
 
 type SmartYield struct {

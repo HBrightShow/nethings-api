@@ -3,7 +3,7 @@ package types
 import (
 	"github.com/shopspring/decimal"
 
-	"github.com/barnbridge/internal-api/types"
+	"github.com/nethings/internal-api/types"
 )
 
 type Tranche struct {

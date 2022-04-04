@@ -8,7 +8,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/barnbridge/internal-api/config"
+	"github.com/nethings/internal-api/config"
 )
 
 var log = logrus.WithField("module", "main")
@@ -20,7 +20,7 @@ var (
 
 	RootCmd = &cobra.Command{
 		Use:   "internal-api",
-		Short: "Run the BarnBridge internal api",
+		Short: "Run the Nethings internal api",
 		PersistentPreRun: func(cmd *cobra.Command, args []string) {
 			err := viper.BindPFlags(cmd.Flags())
 			if err != nil {

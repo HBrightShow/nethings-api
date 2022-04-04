@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/barnbridge/internal-api/cmd"
+	"github.com/nethings/internal-api/cmd"
 )
 
 var (

@@ -3,7 +3,7 @@ package api
 import (
 	"net/http"
 
-	"github.com/barnbridge/internal-api/response"
+	"github.com/nethings/internal-api/response"
 	"github.com/gin-gonic/gin"
 )
 

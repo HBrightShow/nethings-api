@@ -3,7 +3,7 @@ package types
 import (
 	"github.com/shopspring/decimal"
 
-	globalTypes "github.com/barnbridge/internal-api/types"
+	globalTypes "github.com/nethings/internal-api/types"
 )
 
 type Transaction struct {

@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/barnbridge/internal-api/yieldfarming/types"
+	"github.com/nethings/internal-api/yieldfarming/types"
 	"github.com/jackc/pgx/v4"
 	"github.com/pkg/errors"
 )

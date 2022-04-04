@@ -1,5 +1,5 @@
 # internal-api
-API used by the BarnBridge App. 
+API used by the Nethings App. 
 
 ## Configuration
 For all the available config options please see the [configuration file](./config-generated.yml). A sample configuration

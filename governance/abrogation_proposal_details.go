@@ -5,8 +5,8 @@ import (
 	"github.com/jackc/pgx/v4"
 	"github.com/pkg/errors"
 
-	"github.com/barnbridge/internal-api/governance/types"
-	"github.com/barnbridge/internal-api/response"
+	"github.com/nethings/internal-api/governance/types"
+	"github.com/nethings/internal-api/response"
 )
 
 func (g *Governance) HandleAbrogationProposalDetails(ctx *gin.Context) {

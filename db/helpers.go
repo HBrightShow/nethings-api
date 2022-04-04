@@ -13,7 +13,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 
-	"github.com/barnbridge/internal-api/config"
+	"github.com/nethings/internal-api/config"
 )
 
 type ErrorLineExtract struct {

@@ -6,7 +6,7 @@ import (
 	"github.com/jackc/pgx/v4"
 	"github.com/pkg/errors"
 
-	"github.com/barnbridge/internal-api/db"
+	"github.com/nethings/internal-api/db"
 )
 
 func GetHighestBlock(ctx context.Context, db *db.DB) (*int64, error) {

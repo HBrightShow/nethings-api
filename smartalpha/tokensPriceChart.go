@@ -7,9 +7,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/barnbridge/internal-api/response"
-	"github.com/barnbridge/internal-api/smartalpha/types"
-	"github.com/barnbridge/internal-api/utils"
+	"github.com/nethings/internal-api/response"
+	"github.com/nethings/internal-api/smartalpha/types"
+	"github.com/nethings/internal-api/utils"
 )
 
 func (s *SmartAlpha) TokensPriceChart(ctx *gin.Context) {

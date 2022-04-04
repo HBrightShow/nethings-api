@@ -1,7 +1,7 @@
 package types
 
 import (
-	globalTypes "github.com/barnbridge/internal-api/types"
+	globalTypes "github.com/nethings/internal-api/types"
 )
 
 type Pool struct {

@@ -1,4 +1,4 @@
-module github.com/barnbridge/internal-api
+module github.com/nethings/internal-api
 
 go 1.16
 

@@ -10,9 +10,9 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/spf13/cobra"
 
-	"github.com/barnbridge/internal-api/api"
-	"github.com/barnbridge/internal-api/config"
-	"github.com/barnbridge/internal-api/db"
+	"github.com/nethings/internal-api/api"
+	"github.com/nethings/internal-api/config"
+	"github.com/nethings/internal-api/db"
 )
 
 var runCmd = &cobra.Command{

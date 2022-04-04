@@ -5,7 +5,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/barnbridge/internal-api/smartexposure/types"
+	"github.com/nethings/internal-api/smartexposure/types"
 )
 
 func (s *SmartExposure) checkPoolExists(ctx context.Context, addr string) (error, bool) {

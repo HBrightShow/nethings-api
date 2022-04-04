@@ -9,7 +9,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
 
-	"github.com/barnbridge/internal-api/governance/types"
+	"github.com/nethings/internal-api/governance/types"
 )
 
 func (g *Governance) history(ctx context.Context, p types.ProposalFull) ([]types.HistoryEvent, error) {

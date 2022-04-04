@@ -5,8 +5,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
 
-	"github.com/barnbridge/internal-api/config"
-	"github.com/barnbridge/internal-api/db"
+	"github.com/nethings/internal-api/config"
+	"github.com/nethings/internal-api/db"
 )
 
 var log = logrus.WithField("module", "api")

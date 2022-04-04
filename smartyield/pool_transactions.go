@@ -3,15 +3,15 @@ package smartyield
 import (
 	"strings"
 
-	"github.com/barnbridge/internal-api/query"
-	"github.com/barnbridge/internal-api/smartyield/types"
+	"github.com/nethings/internal-api/query"
+	"github.com/nethings/internal-api/smartyield/types"
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgx/v4"
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
 
-	"github.com/barnbridge/internal-api/response"
-	"github.com/barnbridge/internal-api/utils"
+	"github.com/nethings/internal-api/response"
+	"github.com/nethings/internal-api/utils"
 )
 
 func (h *SmartYield) PoolTransactions(ctx *gin.Context) {

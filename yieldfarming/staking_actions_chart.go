@@ -3,9 +3,9 @@ package yieldfarming
 import (
 	"strings"
 
-	"github.com/barnbridge/internal-api/response"
-	"github.com/barnbridge/internal-api/utils"
-	"github.com/barnbridge/internal-api/yieldfarming/types"
+	"github.com/nethings/internal-api/response"
+	"github.com/nethings/internal-api/utils"
+	"github.com/nethings/internal-api/yieldfarming/types"
 	"github.com/gin-gonic/gin"
 	"github.com/pkg/errors"
 )

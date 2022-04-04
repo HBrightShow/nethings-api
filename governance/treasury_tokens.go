@@ -4,9 +4,9 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgx/v4"
 
-	"github.com/barnbridge/internal-api/response"
-	globalTypes "github.com/barnbridge/internal-api/types"
-	"github.com/barnbridge/internal-api/utils"
+	"github.com/nethings/internal-api/response"
+	globalTypes "github.com/nethings/internal-api/types"
+	"github.com/nethings/internal-api/utils"
 )
 
 func (g *Governance) HandleTreasuryTokens(ctx *gin.Context) {

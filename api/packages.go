@@ -1,12 +1,12 @@
 package api
 
 import (
-	"github.com/barnbridge/internal-api/governance"
-	"github.com/barnbridge/internal-api/notifications"
-	"github.com/barnbridge/internal-api/smartalpha"
-	"github.com/barnbridge/internal-api/smartexposure"
-	"github.com/barnbridge/internal-api/smartyield"
-	"github.com/barnbridge/internal-api/yieldfarming"
+	"github.com/nethings/internal-api/governance"
+	"github.com/nethings/internal-api/notifications"
+	"github.com/nethings/internal-api/smartalpha"
+	"github.com/nethings/internal-api/smartexposure"
+	"github.com/nethings/internal-api/smartyield"
+	"github.com/nethings/internal-api/yieldfarming"
 )
 
 func (a *API) registerPackages() {

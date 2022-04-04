@@ -8,11 +8,11 @@ import (
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
 
-	"github.com/barnbridge/internal-api/query"
-	"github.com/barnbridge/internal-api/response"
-	"github.com/barnbridge/internal-api/smartalpha/types"
-	globalTypes "github.com/barnbridge/internal-api/types"
-	"github.com/barnbridge/internal-api/utils"
+	"github.com/nethings/internal-api/query"
+	"github.com/nethings/internal-api/response"
+	"github.com/nethings/internal-api/smartalpha/types"
+	globalTypes "github.com/nethings/internal-api/types"
+	"github.com/nethings/internal-api/utils"
 )
 
 func (s *SmartAlpha) RewardPools(ctx *gin.Context) {

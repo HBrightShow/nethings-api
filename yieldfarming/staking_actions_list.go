@@ -7,10 +7,10 @@ import (
 	"github.com/jackc/pgx/v4"
 	"github.com/pkg/errors"
 
-	"github.com/barnbridge/internal-api/query"
-	"github.com/barnbridge/internal-api/response"
-	"github.com/barnbridge/internal-api/utils"
-	"github.com/barnbridge/internal-api/yieldfarming/types"
+	"github.com/nethings/internal-api/query"
+	"github.com/nethings/internal-api/response"
+	"github.com/nethings/internal-api/utils"
+	"github.com/nethings/internal-api/yieldfarming/types"
 )
 
 func (h *YieldFarming) StakingActionsList(ctx *gin.Context) {

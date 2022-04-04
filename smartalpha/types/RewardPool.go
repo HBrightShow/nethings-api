@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/barnbridge/internal-api/types"
+	"github.com/nethings/internal-api/types"
 )
 
 type RewardPool struct {

@@ -3,7 +3,7 @@ package smartyield
 import (
 	"strings"
 
-	"github.com/barnbridge/internal-api/smartyield/types"
+	"github.com/nethings/internal-api/smartyield/types"
 	"github.com/gin-gonic/gin"
 	"github.com/pkg/errors"
 )

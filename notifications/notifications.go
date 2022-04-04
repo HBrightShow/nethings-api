@@ -1,7 +1,7 @@
 package notifications
 
 import (
-	"github.com/barnbridge/internal-api/db"
+	"github.com/nethings/internal-api/db"
 	"github.com/gin-gonic/gin"
 )
 

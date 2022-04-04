@@ -5,9 +5,9 @@ import (
 	"github.com/jackc/pgx/v4"
 	"github.com/pkg/errors"
 
-	"github.com/barnbridge/internal-api/response"
-	"github.com/barnbridge/internal-api/smartalpha/types"
-	"github.com/barnbridge/internal-api/utils"
+	"github.com/nethings/internal-api/response"
+	"github.com/nethings/internal-api/smartalpha/types"
+	"github.com/nethings/internal-api/utils"
 )
 
 func (s *SmartAlpha) UserQueuePositions(ctx *gin.Context) {
