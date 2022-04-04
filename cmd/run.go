@@ -40,8 +40,8 @@ var runCmd = &cobra.Command{
 			log.Fatal(err)
 		}
 
-		a := api.New(db)
-		go a.Run()
+		//a := api.New(db)
+		//go a.Run()
 
 		<-ctx.Done()
 

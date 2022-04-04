@@ -4,16 +4,10 @@ import (
 	"context"
 	"fmt"
 	"strings"
+	_ "github.com/go-sql-driver/mysql"
+	//"github.com/sirupsen/logrus"
 
-	"github.com/jackc/pgtype"
-	shopspring "github.com/jackc/pgtype/ext/shopspring-numeric"
-	"github.com/jackc/pgx/v4"
-	"github.com/jackc/pgx/v4/log/logrusadapter"
-	"github.com/jackc/pgx/v4/pgxpool"
-	"github.com/pkg/errors"
-	"github.com/sirupsen/logrus"
-
-	"github.com/nethings/internal-api/config"
+	//"github.com/nethings/internal-api/config"
 )
 
 type ErrorLineExtract struct {
@@ -24,8 +18,11 @@ type ErrorLineExtract struct {
 
 // Ping verifies a connection to the database is still alive,
 // establishing a connection if necessary.
+
+
 func (db *DB) Ping(ctx context.Context) error {
-	return db.Connection().Ping(ctx)
+	//return db.Connection().Ping(ctx)
+	return nil
 }
 
 
@@ -54,23 +51,3 @@ func ExtractErrorLine(source string, position int) (ErrorLineExtract, error) {
 	return ele, nil
 }
 
-func (db *DB) pgxPoolConfig() (*pgxpool.Config, error) {
-	pgxCfg, err := pgxpool.ParseConfig(config.Store.Database.ConnectionString)
-	if err != nil {
-		return nil, errors.Wrap(err, "unable to parse db config")
-	}
-
-	pgxCfg.ConnConfig.Logger = logrusadapter.NewLogger(logrus.WithField("module", "pgx"))
-	pgxCfg.ConnConfig.LogLevel = pgx.LogLevelWarn
-	pgxCfg.AfterConnect = func(ctx context.Context, conn *pgx.Conn) error {
-		conn.ConnInfo().RegisterDataType(pgtype.DataType{
-			Value: &shopspring.Numeric{},
-			Name:  "numeric",
-			OID:   pgtype.NumericOID,
-		})
-
-		return nil
-	}
-
-	return pgxCfg, nil
-}

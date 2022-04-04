@@ -5,7 +5,7 @@ go 1.16
 require (
 	github.com/gin-contrib/cors v1.3.0
 	github.com/gin-gonic/gin v1.7.7
-	github.com/jackc/pgtype v1.8.0
+	github.com/go-sql-driver/mysql v1.4.0
 	github.com/jackc/pgx/v4 v4.12.0
 	github.com/lacasian/gogo v0.0.0-20210409131350-2a34a42d506e
 	github.com/lacasian/logrus-module-formatter v0.0.0-20201126131010-ff27c57db003

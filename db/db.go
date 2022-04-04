@@ -1,15 +1,17 @@
 package db
 
 import (
-	"context"
-
-	"github.com/jackc/pgx/v4/pgxpool"
+	//"context"
+	"database/sql"
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 )
 
+var log = logrus.WithField("module", "db")
+
 type DB struct {
-	pool   *pgxpool.Pool
+	pool   *sql.DB
 	logger *logrus.Entry
 }
 
@@ -18,14 +20,11 @@ func New() (*DB, error) {
 		logger: logrus.WithField("module", "db"),
 	}
 
-	pgxCfg, err := db.pgxPoolConfig()
+	pool, err := sql.Open("mysql", "root:123456@tcp(192.168.2.65:3306)/shop?charset=utf8")
 	if err != nil {
-		return nil, errors.Wrap(err, "could not build pgx config")
-	}
-
-	pool, err := pgxpool.ConnectConfig(context.Background(), pgxCfg)
-	if err != nil {
-		return nil, errors.Wrap(err, "could not connect to pgx pool")
+		return nil, errors.Wrap(err, "could not build mysql config")
+	} else {
+		log.Error("connect mysql successful. ", err.Error())
 	}
 
 	db.pool = pool
@@ -33,6 +32,6 @@ func New() (*DB, error) {
 	return db, nil
 }
 
-func (db *DB) Connection() *pgxpool.Pool {
+func (db *DB) Connection() *sql.DB {
 	return db.pool
 }
