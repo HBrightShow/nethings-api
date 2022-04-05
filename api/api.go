@@ -7,6 +7,7 @@ import (
 
 	"github.com/nethings/internal-api/config"
 	"github.com/nethings/internal-api/db"
+	"fmt"
 )
 
 var log = logrus.WithField("module", "api")
@@ -29,12 +30,15 @@ type Package interface {
 }
 
 func New(db *db.DB) *API {
+	fmt.Println("8+++++++++++")
 	return &API{
 		db: db,
 	}
 }
 
 func (a *API) Run() {
+
+	fmt.Println("9+++++++++++")
 	a.registerPackages()
 
 	a.engine = gin.Default()

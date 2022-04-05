@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 
 	"github.com/nethings/internal-api/db"
-	"github.com/nethings/internal-api/utils"
+	//"github.com/nethings/internal-api/utils"
 )
 
 func Error(c *gin.Context, err error) {
@@ -37,6 +37,7 @@ func OK(c *gin.Context, data interface{}, meta ...interface{}) {
 }
 
 func OKWithBlock(c *gin.Context, db *db.DB, data interface{}, meta ...interface{}) {
+	/*
 	block, err := utils.GetHighestBlock(c, db)
 	if err != nil {
 		Error(c, err)
@@ -59,6 +60,8 @@ func OKWithBlock(c *gin.Context, db *db.DB, data interface{}, meta ...interface{
 			return
 		}
 	}
+
+	*/
 }
 
 func NotFound(c *gin.Context) {

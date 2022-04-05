@@ -35,13 +35,16 @@ var runCmd = &cobra.Command{
 			}
 		}()
 
+		fmt.Println("2+++++++++++++++++++++")
+
 		db, err := db.New()
 		if err != nil {
 			log.Fatal(err)
 		}
+		
 
-		//a := api.New(db)
-		//go a.Run()
+		a := api.New(db)
+		go a.Run()
 
 		<-ctx.Done()
 

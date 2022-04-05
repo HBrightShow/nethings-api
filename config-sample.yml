@@ -21,7 +21,7 @@ db:
   host: "internal-api"
 
   # Database port
-  port: 5432
+  port: 3306
 
   # Database sslmode
   sslmode: "disable"
