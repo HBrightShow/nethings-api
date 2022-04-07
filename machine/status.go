@@ -8,7 +8,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	
 
-	"github.com/nethings/internal-api/machine/types"
+	//"github.com/nethings/internal-api/machine/types"
 	"github.com/nethings/internal-api/query"
 	"github.com/nethings/internal-api/response"
 )
@@ -19,11 +19,6 @@ func (g *Machine) GetStatus(ctx *gin.Context) {
 	//fmt.Println("GetStatus recv")
 	//ctx.String(200, "Hello, Geektutu")
 
-	proposalID, err := getProposalId(ctx)
-	if err != nil {
-		response.Error(ctx, errors.New("invalid proposalID"))
-		return
-	}
 
 	builder := query.New()
 
@@ -41,15 +36,19 @@ func (g *Machine) GetStatus(ctx *gin.Context) {
 		SELECT * FROM address
 	`)
 
-	params = append(params, proposalID)
 	q = strings.Replace(q, "$param_overwrite$", fmt.Sprintf("$%d", len(params)), 1)
 
-	rows, err := g.db.Connection().Query(ctx, q, params...).Scan(&count)
-	if err != nil && err != pgx.ErrNoRows {
+	//var count int
+	rows, err := g.db.Connection().Query(q, params...)
+	fmt.Println("rows: ", rows)
+
+	if err != nil {
 		response.Error(ctx, err)
 		return
 	}
 	defer rows.Close()
+	fmt.Println("rows: ", rows)
 
-	response.OKWithBlock(ctx, g.db, votes, response.Meta().Set("count", count))
+	//response.OK(ctx, "bright")
+	response.OK(ctx, rows)
 }

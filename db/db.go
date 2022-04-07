@@ -22,7 +22,7 @@ func New() (*DB, error) {
 		logger: logrus.WithField("module", "db"),
 	}
 
-	pool, err := sql.Open("mysql", "root:123456@tcp(192.168.2.65:3306)/shop?charset=utf8")
+	pool, err := sql.Open("mysql", "net:123456@tcp(192.168.2.65:3306)/shop?charset=utf8")
 
 	fmt.Println("4+++++++++++")
 	if err != nil {
