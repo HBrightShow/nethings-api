@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/pkg/errors"
 
-	"github.com/nethings/internal-api/machine/types"
+	"github.com/nethings/nethings-api/machine/types"
 )
 
 func getTimeLeft(state types.ProposalState, createTime, warmUpDuration, activeDuration, queueDuration, gracePeriodDuration int64) *int64 {
