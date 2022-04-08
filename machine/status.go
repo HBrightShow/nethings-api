@@ -8,7 +8,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	
 
-	//"github.com/nethings/internal-api/machine/types"
+	"github.com/nethings/internal-api/machine/types"
 	"github.com/nethings/internal-api/query"
 	"github.com/nethings/internal-api/response"
 )
@@ -40,15 +40,32 @@ func (g *Machine) GetStatus(ctx *gin.Context) {
 
 	//var count int
 	rows, err := g.db.Connection().Query(q, params...)
-	fmt.Println("rows: ", rows)
+	//fmt.Println("rows: ", rows)
 
 	if err != nil {
 		response.Error(ctx, err)
 		return
 	}
 	defer rows.Close()
-	fmt.Println("rows: ", rows)
+
+	
+	//fmt.Printf("%T", rows)	//sql.rows
+
+	var albums []types.Album
+
+	// Loop through rows, using Scan to assign column data to struct fields.
+    for rows.Next() {
+        var alb types.Album
+        if err := rows.Scan(&alb.Id, &alb.Uid, &alb.Phone,
+            &alb.Name, &alb.Zipcode, &alb.Address, &alb.Default_address, &alb.Add_time); err != nil {
+            return 
+        }
+        albums = append(albums, alb)
+    }
+    if err = rows.Err(); err != nil {
+        return 
+    }
 
 	//response.OK(ctx, "bright")
-	response.OK(ctx, rows)
+	response.OK(ctx, albums)
 }
